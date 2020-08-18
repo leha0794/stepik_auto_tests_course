@@ -27,10 +27,10 @@ class TestMainPage1(object):
         browser.find_element_by_css_selector(".basket-mini .btn-group > a")
 
 # Команда для запуска тестов кторые имют маркеры smoke и MacOS (не обязательно одновременно)
-# pytest -s -v -m "smoke or MacOS" S3_lesson4/test_fixture8.py
+# pytest -s -v -m "smoke or MacOS" S3_lesson5_step3.py
 # Запустится два теста
 
 # Команда для запуска тестов кторые имют одновременно маркеры smoke и MacOS
-# pytest -s -v -m "smoke and MacOS" S3_lesson4/test_fixture8.py
+# pytest -s -v -m "smoke and MacOS" S3_lesson5_step3.py
 # Запустится только второй тест
 
