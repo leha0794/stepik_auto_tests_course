@@ -2,17 +2,19 @@ from selenium import webdriver
 import time
 
 try:
+
     link = "http://suninjuly.github.io/registration1.html"
+    # link = "http://suninjuly.github.io/registration2.html"
     browser = webdriver.Chrome()
     browser.get(link)
 
     # Ваш код, который заполняет обязательные поля
-    input1 = browser.find_element_by_class_name("form-control.first")
+    input1 = browser.find_element_by_xpath('//div[@class="form-group first_class"]//input[@required]')
     input1.send_keys("Ivan")
-    input2 = browser.find_element_by_class_name("form-control.second")
+    input2 = browser.find_element_by_xpath('//div[@class="form-group second_class"]//input[@required]')
     input2.send_keys("Petrov")
-    input3 = browser.find_element_by_class_name("form-control.third")
-    input3.send_keys("Smolensk")
+    input3 = browser.find_element_by_xpath('//div[@class="form-group third_class"]//input[@required]')
+    input3.send_keys("test@test.com")
 
 
     # Отправляем заполненную форму
@@ -33,6 +35,6 @@ try:
 
 finally:
     # ожидание чтобы визуально оценить результаты прохождения скрипта
-    time.sleep(10)
+    time.sleep(2)
     # закрываем браузер после всех манипуляций
     browser.quit()
